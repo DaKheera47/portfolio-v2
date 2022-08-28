@@ -4,8 +4,8 @@ type Props = {};
 
 export default function Sidebar({}: Props) {
     return (
-        <div className="md:pl-12 pt-12 w-4/5 mx-auto md:absolute md:left-0 md:top-0 bg-zinc-900 md:w-2/5 md:h-screen md:overflow-y-hidden">
-            <div className="w-full border-b border-cyan-500 mb-6 pb-5">
+        <div className="md:pl-20 pt-12 w-4/5 mx-auto md:absolute md:left-0 md:top-0 bg-zinc-900 md:w-2/5 md:h-screen md:overflow-y-hidden">
+            <div className="w-full border-b border-gray-200 mb-6 pb-5">
                 <h1 className="font-bold text-4xl md:text-5xl">
                     Shaheer Sarfaraz
                 </h1>

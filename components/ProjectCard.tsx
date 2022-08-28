@@ -1,5 +1,3 @@
-import React from "react";
-
 type Props = {
     repoName: string;
     description: string;
@@ -16,17 +14,17 @@ export default function ProjectCard({
     return (
         <a
             href={repoUrl}
-            className="w-full md:w-4/5 mx-auto"
+            className="w-full mx-auto"
             target="_blank"
             rel="noopener noreferrer"
         >
-            <div className="w-full bg-zinc-800 mx-auto p-8 my-6 hover:scale-105 transition-transform cursor-pointer rounded-lg">
-                <div className="w-full border-b border-cyan-500 mb-6 pb-1">
-                    <span className="text-gray-50 font-light text-sm uppercase tracking-[4px]">
+            <div className="w-full bg-zinc-800 mx-auto p-8 my-2 hover:scale-105 transition-transform cursor-pointer rounded-lg">
+                <div className="w-full border-b mb-6 pb-1">
+                    <span className="text-gray-200 font-light text-sm uppercase tracking-[4px]">
                         {type}
                     </span>
                 </div>
-                <h3 className="font-medium text-xl tracking-tight md:tracking-normal md:text-2xl md:font-bold my-2">
+                <h3 className="text-base tracking-tight md:tracking-normal md:text-xl my-2 font-mono px-5 py-2 font-semibold bg-zinc-700 text-zinc-100 rounded-lg w-fit">
                     {repoName}
                 </h3>
                 <p className="text-gray-300">{description}</p>

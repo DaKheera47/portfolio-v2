@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+  font-family: "Fira Code", monospace;
     font-family: "Raleway", sans-serif;
 }
 
