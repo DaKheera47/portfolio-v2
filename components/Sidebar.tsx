@@ -1,4 +1,5 @@
-import React from "react";
+import Image from "next/image";
+import me from "../public/favicon.png";
 
 type Props = {};
 
@@ -36,37 +37,42 @@ export default function Sidebar({}: Props) {
                 </p>
             </div>
 
-            <p className="text-gray-200 mt-12">
-                You can find me on{" "}
-                <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/shaheer-sarfaraz-3965861b6/"
-                    className="link"
-                >
-                    LinkedIn
-                </a>
-                , look at all my repos on
-                <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://github.com/DaKheera47"
-                    className="link ml-1"
-                >
-                    Github
-                </a>
-                , or just shoot me an email at{" "}
-                <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="mailto:shaheer30sarfaraz@gmail.com"
-                    className="link"
-                >
-                    shaheer30sarfaraz@gmail.com
-                </a>
-                . <br />
-                I&apos;d love to hear from you!
-            </p>
+            <div className="mt-12 flex justify-between">
+                <div className="w-1/5 mt-2">
+                    <Image src={me} alt="Picture of Shaheer Sarfaraz" />
+                </div>
+                <p className="text-gray-200 w-4/5 ml-5">
+                    You can find me on{" "}
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.linkedin.com/in/shaheer-sarfaraz-3965861b6/"
+                        className="link"
+                    >
+                        LinkedIn
+                    </a>
+                    , look at all my repos on
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/DaKheera47"
+                        className="link ml-1"
+                    >
+                        Github
+                    </a>
+                    , or just shoot me an email at{" "}
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="mailto:shaheer30sarfaraz@gmail.com"
+                        className="link"
+                    >
+                        shaheer30sarfaraz@gmail.com
+                    </a>
+                    . <br />
+                    I&apos;d love to hear from you!
+                </p>
+            </div>
         </div>
     );
 }
