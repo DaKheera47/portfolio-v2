@@ -39,7 +39,11 @@ export default function Sidebar({}: Props) {
 
             <div className="mt-12 flex justify-between">
                 <div className="w-1/5 mt-2">
-                    <Image src={me} alt="Picture of Shaheer Sarfaraz" />
+                    <Image
+                        src={me}
+                        alt="Picture of Shaheer Sarfaraz"
+                        placeholder="blur"
+                    />
                 </div>
                 <p className="text-gray-200 w-4/5 ml-5">
                     You can find me on{" "}
