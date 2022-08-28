@@ -40,8 +40,8 @@ export default function MainContent({}: Props) {
     ];
 
     return (
-        <div className="pt-4 md:px-20 md:absolute md:right-0 md:top-0 md:h-screen bg-zinc-900 w-4/5 md:w-3/5 md:overflow-y-scroll mx-auto flex flex-wrap">
-            <h1 className="mt-6 mb-4 md:my-6 font-bold text-4xl md:text-5xl">
+        <div className="pt-4 lg:px-20 lg:absolute lg:right-0 lg:top-0 lg:h-screen bg-zinc-900 w-4/5 lg:w-3/5 lg:overflow-y-scroll mx-auto flex flex-wrap">
+            <h1 className="mt-6 mb-4 lg:my-6 font-bold text-4xl lg:text-5xl">
                 My Projects
             </h1>
             {projects.map((project) => (

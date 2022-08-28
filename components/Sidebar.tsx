@@ -5,12 +5,12 @@ type Props = {};
 
 export default function Sidebar({}: Props) {
     return (
-        <div className="md:pl-20 pt-12 w-4/5 mx-auto md:absolute md:left-0 md:top-0 bg-zinc-900 md:w-2/5 md:h-screen md:overflow-y-hidden">
+        <div className="lg:pl-20 pt-12 w-4/5 mx-auto lg:absolute lg:left-0 lg:top-0 bg-zinc-900 lg:w-2/5 lg:h-screen lg:overflow-y-hidden">
             <div className="w-full border-b border-gray-200 mb-12 pb-5">
-                <h1 className="font-bold text-4xl md:text-5xl">
+                <h1 className="font-bold text-4xl lg:text-5xl">
                     Shaheer Sarfaraz
                 </h1>
-                <p className="font-base text-lg md:text-xl">
+                <p className="font-base text-lg lg:text-xl">
                     Full Stack Developer at{" "}
                     <a
                         target="_blank"
