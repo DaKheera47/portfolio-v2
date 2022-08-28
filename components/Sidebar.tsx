@@ -5,7 +5,7 @@ type Props = {};
 export default function Sidebar({}: Props) {
     return (
         <div className="md:pl-20 pt-12 w-4/5 mx-auto md:absolute md:left-0 md:top-0 bg-zinc-900 md:w-2/5 md:h-screen md:overflow-y-hidden">
-            <div className="w-full border-b border-gray-200 mb-6 pb-5">
+            <div className="w-full border-b border-gray-200 mb-12 pb-5">
                 <h1 className="font-bold text-4xl md:text-5xl">
                     Shaheer Sarfaraz
                 </h1>
@@ -15,24 +15,57 @@ export default function Sidebar({}: Props) {
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://www.pro-mirage.com"
-                        className="underline"
+                        className="link"
                     >
                         Project Mirage
                     </a>
                 </p>
             </div>
+            <div className="w-full border-b border-gray-200 pb-12">
+                <p className="text-gray-200">
+                    I am a self-taught developer from Pakistan and am always
+                    looking to learn new web development technologies. Lately,
+                    I&apos;ve discovered that I enjoy working with React,
+                    Typescript and particularly Next.js.
+                </p>
 
-            <p className="text-gray-200">
-                I am a self-taught developer from Pakistan and am always looking
-                to learn new web development technologies. Lately, I&apos;ve
-                discovered that I enjoy working with React, Typescript and
-                particularly Next.js.
-            </p>
+                <p className="text-gray-200">
+                    In the future, I hope to work on projects with new
+                    technologies like Svelte on the frontend, or Deno on the
+                    backend that will help me improve my skills and knowledge.
+                </p>
+            </div>
 
-            <p className="text-gray-200">
-                In the future, I hope to work on projects with new technologies
-                like Svelte on the frontend, or Deno on the backend that will
-                help me improve my skills and knowledge.
+            <p className="text-gray-200 mt-12">
+                You can find me on{" "}
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/shaheer-sarfaraz-3965861b6/"
+                    className="link"
+                >
+                    LinkedIn
+                </a>
+                , look at all my repos on
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/DaKheera47"
+                    className="link ml-1"
+                >
+                    Github
+                </a>
+                , or just shoot me an email at{" "}
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="mailto:shaheer30sarfaraz@gmail.com"
+                    className="link"
+                >
+                    shaheer30sarfaraz@gmail.com
+                </a>
+                . <br />
+                I&apos;d love to hear from you!
             </p>
         </div>
     );

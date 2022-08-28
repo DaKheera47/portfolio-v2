@@ -14,7 +14,7 @@ export default function MainContent({}: Props) {
         },
         {
             repoName: "DaKheera47/signiifyhr",
-            description: "Landing page for signiifyhr, an online career coach",
+            description: "Landing page for Signiify, an online career coach",
             type: "Nextjs | Showcase",
             repoUrl: "http://signiify.co.uk/",
         },
