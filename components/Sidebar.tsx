@@ -9,7 +9,7 @@ export default function Sidebar({}: Props) {
                 <h1 className="font-bold text-4xl md:text-5xl">
                     Shaheer Sarfaraz
                 </h1>
-                <p className="font-base text-lg md:text-xl whitespace-pre">
+                <p className="font-base text-lg md:text-xl">
                     Full Stack Developer at{" "}
                     <a
                         target="_blank"
