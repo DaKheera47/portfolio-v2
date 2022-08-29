@@ -5,7 +5,7 @@ type Props = {};
 
 export default function Sidebar({}: Props) {
     return (
-        <div className="lg:pl-20 pt-12 w-4/5 mx-auto lg:absolute lg:left-0 lg:overflow-y-scroll lg:top-0 bg-zinc-900 lg:w-2/5 lg:h-screen">
+        <div className="lg:pl-20 pt-12 w-4/5 mx-auto lg:absolute lg:left-0 lg:overflow-y-auto lg:top-0 bg-zinc-900 lg:w-2/5 lg:h-screen">
             <div className="w-full border-b border-gray-200 mb-12 pb-5">
                 <h1 className="font-bold text-4xl lg:text-5xl">
                     Shaheer Sarfaraz
