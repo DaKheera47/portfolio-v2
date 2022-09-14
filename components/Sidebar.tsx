@@ -22,18 +22,31 @@ export default function Sidebar({}: Props) {
                     </a>
                 </p>
             </div>
-            <div className="w-full border-b border-gray-200 pb-12">
-                <p className="text-gray-200">
+            <div className="w-full border-b border-gray-200 pb-12 ">
+                <p className="text-gray-200 mb-4">
                     I am a self-taught developer from Pakistan and am always
                     looking to learn new web development technologies. Lately,
                     I&apos;ve discovered that I enjoy working with React,
                     Typescript and particularly Next.js.
                 </p>
 
-                <p className="text-gray-200">
-                    In the future, I hope to work on projects with new
-                    technologies like Svelte on the frontend, or Deno on the
-                    backend that will help me improve my skills and knowledge.
+                <p className="text-gray-200 mb-4">
+                    My skills include Python, Next.js, Typescript and Node.js
+                    just to name a few.
+                </p>
+
+                <p className="text-gray-200 mb-4">
+                    I also write about my experiences and learnings during a lot
+                    of my projects on my blog. You can find it{" "}
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://dakheera47.hashnode.dev/"
+                        className="link"
+                    >
+                        on Hashnode
+                    </a>
+                    .
                 </p>
             </div>
 
