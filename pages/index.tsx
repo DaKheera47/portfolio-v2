@@ -12,7 +12,7 @@ const Home: NextPage = () => {
                     name="description"
                     content="Portfolio of Shaheer Sarfaraz, a self-taught developer from Pakistan."
                 />
-                <link rel="icon" href="/me.jpeg" />
+                <link rel="icon" href="/me.png" />
             </Head>
 
             <main className="text-gray-100">

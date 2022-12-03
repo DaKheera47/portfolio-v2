@@ -1,5 +1,5 @@
 import Image from "next/image";
-import me from "../public/me.jpeg";
+import me from "../public/me.png";
 
 type Props = {};
 
@@ -56,6 +56,7 @@ export default function Sidebar({}: Props) {
                         src={me}
                         alt="Picture of Shaheer Sarfaraz"
                         placeholder="blur"
+                        className="rounded-full aspect-square"
                     />
                 </div>
                 <p className="text-gray-200 w-4/5 ml-5">
