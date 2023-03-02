@@ -13,12 +13,6 @@ export default function MainContent({}: Props) {
             repoUrl: "https://mumtazurdu.com",
         },
         {
-            repoName: "DaKheera47/signiifyhr",
-            description: "Landing page for Signiify, an online career coach",
-            type: "Nextjs | Showcase",
-            repoUrl: "http://signiify.co.uk/",
-        },
-        {
             repoName: "DaKheera47/autoclass",
             description: "Open Zoom meetings automatically on time, every time",
             type: "Python | Automation",
@@ -32,10 +26,45 @@ export default function MainContent({}: Props) {
             repoUrl: "https://github.com/DaKheera47/meet-link-generator",
         },
         {
+            repoName: "PM/high-income-consultancy",
+            description:
+                "Landing page for High Income Consultancy, a income consultancy firm",
+            type: "Nextjs | Landing Page",
+            repoUrl: "https://www.hiccoaching.com/",
+        },
+        {
+            repoName: "PM/threegency",
+            description:
+                "Landing page with complete Strapi integration for Threegency, a web3 agency",
+            type: "Nextjs | Landing Page",
+            repoUrl: "https://threegency.promirage.com/",
+        },
+        {
+            repoName: "PM/atoro",
+            description:
+                "Landing page with complete Strapi integration for Atoro, a cyber security firm based in Ireland",
+            type: "Nextjs | Landing Page",
+            repoUrl: "https://atoro.promirage.com/",
+        },
+        {
+            repoName: "PM/indus-marine-services",
+            description:
+                "Full Stack web app for Indus Marine Services, a marine services firm based in UAE",
+            type: "Nodejs | Full Stack",
+            repoUrl: "https://ims-auh.com/",
+        },
+        {
+            repoName: "PM/stellar-consultancy",
+            description:
+                "Landing page for Stellar Consultancy, a design consultancy firm",
+            type: "WordPress | Landing Page",
+            repoUrl: "https://www.stellarconsultancy.ca/",
+        },
+        {
             repoName: "PM/ProjectMirageWebsite",
             description: "Landing page for Project Mirage",
-            type: "HTML | Showcase",
-            repoUrl: "https://www.pro-mirage.com",
+            type: "Nextjs | Showcase",
+            repoUrl: "https://www.promirage.com",
         },
     ];
 
