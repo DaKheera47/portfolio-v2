@@ -20,7 +20,7 @@ export default function ProjectCard({
             target="_blank"
             rel="noopener noreferrer"
         >
-            <div className="w-full bg-zinc-800 mx-auto p-8 my-2 lg:hover:scale-105 transition-transform cursor-pointer rounded-lg">
+            <div className="w-full bg-zinc-800 mx-auto p-8 my-2 hover:outline hover:outline-gray-400 duration-150 transition-all lg:hover:scale-[99%] cursor-pointer rounded-lg">
                 <div className="w-full border-b mb-6 pb-1">
                     <span className="text-gray-200 font-light text-sm uppercase tracking-[4px]">
                         {type}
