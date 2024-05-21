@@ -74,7 +74,7 @@ export default function MainContent({ hashnodeData }: Props) {
     return (
         <div className="mt-4 lg:px-20 lg:absolute lg:right-0 lg:top-0 lg:h-[calc(100vh-1rem)] bg-zinc-900 w-4/5 lg:w-3/5 lg:overflow-y-scroll mx-auto flex flex-wrap">
             <div className="relative">
-                <h1 className="pt-6 pb-4 bg-zinc-900 font-bold text-4xl sticky top-0 z-10">
+                <h1 id="projects" className="pt-6 pb-4 bg-zinc-900 font-bold text-4xl sticky top-0 z-10">
                     Projects
                 </h1>
                 {projects.map((project) => (
@@ -89,7 +89,7 @@ export default function MainContent({ hashnodeData }: Props) {
             </div>
 
             <div className="relative">
-                <h1 className="pt-6 pb-4 bg-zinc-900 font-bold text-4xl sticky top-0 z-10">
+                <h1 id="musings" className="pt-6 pb-4 bg-zinc-900 font-bold text-4xl sticky top-0 z-10">
                     Musings
                 </h1>
                 {hashnodeData.map((item) => (
