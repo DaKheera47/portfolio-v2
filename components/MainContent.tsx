@@ -72,27 +72,33 @@ export default function MainContent({ hashnodeData }: Props) {
     ];
 
     return (
-        <div className="pt-4 lg:px-20 lg:absolute lg:right-0 lg:top-0 lg:h-screen bg-zinc-900 w-4/5 lg:w-3/5 lg:overflow-y-scroll mx-auto flex flex-wrap">
-            <h1 className="mt-6 mb-4 lg:mb-2 font-bold text-4xl">
-                My Projects
-            </h1>
-            {projects.map((project) => (
-                <ProjectCard
-                    key={project.repoName}
-                    repoName={project.repoName}
-                    description={project.description}
-                    type={project.type}
-                    repoUrl={project.repoUrl}
-                />
-            ))}
+        <div className="mt-4 lg:px-20 lg:absolute lg:right-0 lg:top-0 lg:h-[calc(100vh-1rem)] bg-zinc-900 w-4/5 lg:w-3/5 lg:overflow-y-scroll mx-auto flex flex-wrap">
+            <div className="relative">
+                <h1 className="pt-6 pb-4 bg-zinc-900 font-bold text-4xl sticky top-0 z-10">
+                    Projects
+                </h1>
+                {projects.map((project) => (
+                    <ProjectCard
+                        key={project.repoName}
+                        repoName={project.repoName}
+                        description={project.description}
+                        type={project.type}
+                        repoUrl={project.repoUrl}
+                    />
+                ))}
+            </div>
 
-            <h1 className="mt-6 mb-4 lg:mb-2 font-bold text-4xl">Musings</h1>
-            {hashnodeData.map((item) => (
-                <MusingCard
-                    key={item.slug}
-                    {...item}
-                />
-            ))}
+            <div className="relative">
+                <h1 className="pt-6 pb-4 bg-zinc-900 font-bold text-4xl sticky top-0 z-10">
+                    Musings
+                </h1>
+                {hashnodeData.map((item) => (
+                    <MusingCard
+                        key={item.slug}
+                        {...item}
+                    />
+                ))}
+            </div>
 
             <Footer />
         </div>
