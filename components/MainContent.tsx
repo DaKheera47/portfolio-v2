@@ -1,9 +1,12 @@
-import React from "react";
+import Footer from "./Footer";
+import MusingCard from "./MusingCard";
 import ProjectCard from "./ProjectCard";
 
-type Props = {};
+type Props = {
+    hashnodeData: TransformedPost[];
+};
 
-export default function MainContent({}: Props) {
+export default function MainContent({ hashnodeData }: Props) {
     const projects = [
         {
             repoName: "DaKheera47/mumtaz-urdu",
@@ -70,7 +73,7 @@ export default function MainContent({}: Props) {
 
     return (
         <div className="pt-4 lg:px-20 lg:absolute lg:right-0 lg:top-0 lg:h-screen bg-zinc-900 w-4/5 lg:w-3/5 lg:overflow-y-scroll mx-auto flex flex-wrap">
-            <h1 className="mt-6 mb-4 lg:my-6 font-bold text-4xl lg:text-5xl">
+            <h1 className="mt-6 mb-4 lg:mb-2 font-bold text-4xl">
                 My Projects
             </h1>
             {projects.map((project) => (
@@ -83,26 +86,15 @@ export default function MainContent({}: Props) {
                 />
             ))}
 
-            <p className="my-4 text-gray-400 text-center w-full text-xs">
-                Made with{" "}
-                <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://tailwindcss.com"
-                    className="underline text-white"
-                >
-                    Tailwind CSS
-                </a>{" "}
-                and{" "}
-                <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://nextjs.org"
-                    className="underline text-white"
-                >
-                    Next.js
-                </a>
-            </p>
+            <h1 className="mt-6 mb-4 lg:mb-2 font-bold text-4xl">Musings</h1>
+            {hashnodeData.map((item) => (
+                <MusingCard
+                    key={item.slug}
+                    {...item}
+                />
+            ))}
+
+            <Footer />
         </div>
     );
 }
