@@ -5,7 +5,7 @@ type Props = {};
 
 export default function Sidebar({}: Props) {
     return (
-        <div className="lg:pl-20 pt-12 w-4/5 mx-auto lg:absolute lg:left-0 lg:overflow-y-auto lg:top-0 bg-zinc-900 lg:w-2/5 lg:h-screen">
+        <div className="lg:pl-20 pt-12 w-4/5 mx-auto lg:absolute lg:left-0 lg:overflow-y-auto lg:top-0 bg-zinc-900 lg:w-2/5 lg:h-screen lg:pr-8">
             <div className="w-full border-b border-gray-200 mb-12 pb-5">
                 <h1 className="font-bold text-4xl lg:text-5xl">
                     Shaheer Sarfaraz
@@ -22,31 +22,74 @@ export default function Sidebar({}: Props) {
                     </a>
                 </p>
             </div>
-            <div className="w-full border-b border-gray-200 pb-12 ">
-                <p className="text-gray-200 mb-4">
-                    I am a self-taught developer from Pakistan and am always
-                    looking to learn new web development technologies. Lately,
-                    I&apos;ve discovered that I enjoy working with React,
-                    Typescript and particularly Next.js.
-                </p>
-
-                <p className="text-gray-200 mb-4">
-                    My skills include Python, Next.js, Typescript and Node.js
-                    just to name a few.
-                </p>
-
-                <p className="text-gray-200 mb-4">
-                    I also write about my experiences and learnings during a lot
-                    of my projects on my blog. You can find it{" "}
+            <div className="w-full border-b border-gray-200 pb-12 space-y-4">
+                <p>
+                    My name is Shaheer, I also go by DaKheera47 often. I
+                    co-founded{" "}
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://dakheera47.hashnode.dev/"
+                        href="https://www.promirage.com"
                         className="link"
                     >
-                        on Hashnode
+                        Project Mirage
+                    </a>
+                    . I&#39;m primarily a web developer, these days working with
+                    tech like Next JS, Astro, Tailwind and so much more because
+                    of the JS ecosystem. I&#39;ve worked with Node.js and
+                    Express on the backend when the requirements call for a web
+                    app than website. These days, however. I find Nextjs&#39;s
+                    API routes do the job well enough to cover most situations.
+                </p>
+                <p>
+                    This website isn&#39;t a comprehensive list of my skills,
+                    those can be viewed{" "}
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link"
+                        href="https://rxresu.me/shaheer30sarfaraz/shaheer"
+                    >
+                        here
+                    </a>
+                    . At it&#39;s core, this website is meant to be me talking
+                    about projects I&#39;m proud of.
+                </p>
+                <p>
+                    I often write about things I&#39;m learning about, or stuff
+                    I want to share with the world on my blog, listed{" "}
+                    <a
+                        className="link"
+                        href="#musings"
+                    >
+                        further down this page
+                    </a>
+                    , or directly on{" "}
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link"
+                        href="https://dakheera47.hashnode.dev/"
+                    >
+                        Hashnode
                     </a>
                     .
+                </p>
+                <p>
+                    These days I&#39;m learning Rust to expand my knowledge to
+                    different areas of software development, because Rust and
+                    high level web development don&#39;t have much overlap. I
+                    want to figure out why Rust consistently tops the
+                    StackOverflow Developer Surveys (
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link"
+                        href="https://survey.stackoverflow.co/2023/#section-admired-and-desired-programming-scripting-and-markup-languages"
+                    >
+                        see 2023
+                    </a>
+                    ), and I&#39;m whoo boy I&#39;m impressed at first glance.
                 </p>
             </div>
 
@@ -60,7 +103,7 @@ export default function Sidebar({}: Props) {
                     />
                 </div>
                 <p className="text-gray-200 w-4/5 ml-5">
-                    You can find me on{" "}
+                    Unsurpringly, I&apos;m on{" "}
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -69,16 +112,16 @@ export default function Sidebar({}: Props) {
                     >
                         LinkedIn
                     </a>
-                    , look at all my repos on
+                    . You can view my
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://github.com/DaKheera47"
                         className="link ml-1"
                     >
-                        Github
+                        Github Repositories
                     </a>
-                    , or just shoot me an email at{" "}
+                    , or just fire an email at{" "}
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -87,8 +130,7 @@ export default function Sidebar({}: Props) {
                     >
                         shaheer30sarfaraz@gmail.com
                     </a>
-                    . <br />
-                    I&apos;d love to hear from you!
+                    .
                 </p>
             </div>
         </div>
