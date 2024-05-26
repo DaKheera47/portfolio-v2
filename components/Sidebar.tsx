@@ -15,7 +15,7 @@ export default function Sidebar({}: Props) {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://www.pro-mirage.com"
+                        href="https://www.promirage.com"
                         className="link"
                     >
                         Project Mirage
@@ -89,7 +89,7 @@ export default function Sidebar({}: Props) {
                     >
                         see 2023
                     </a>
-                    ), and I&#39;m whoo boy I&#39;m impressed at first glance.
+                    ), and at first glance, whoo boy I&#39;m impressed.
                 </p>
             </div>
 
@@ -102,7 +102,7 @@ export default function Sidebar({}: Props) {
                         className="rounded-full aspect-square"
                     />
                 </div>
-                <p className="text-gray-200 w-4/5 ml-5">
+                <p className="text-gray-200 w-4/5 ml-5 my-auto">
                     Unsurpringly, I&apos;m on{" "}
                     <a
                         target="_blank"
