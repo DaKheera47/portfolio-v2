@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body {
-    font-family: "Fira Code", monospace;
-    font-family: "Raleway", sans-serif;
+  font-family: "Fira Code", monospace;
+  font-family: "Raleway", sans-serif;
 }
 
 /* * {
@@ -12,13 +12,13 @@ body {
 } */
 
 *::selection {
-    @apply bg-black text-purple-400;
+  @apply bg-black text-purple-400;
 }
 
 html {
-    scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
 }
 
 .link {
-    @apply underline underline-offset-2 py-1 hover:bg-purple-700 hover:text-white transition-colors;
+  @apply py-1 underline underline-offset-2 transition-colors hover:bg-purple-700 hover:text-white;
 }

@@ -1,45 +1,45 @@
 interface CoverImage {
-    url: string;
+  url: string;
 }
 
 interface Node {
-    brief: string | null;
-    subtitle: string;
-    coverImage: CoverImage;
-    slug: string;
-    title: string;
-    readTimeInMinutes: number;
-    updatedAt: string;
-    views: number;
-    url: string;
+  brief: string | null;
+  subtitle: string;
+  coverImage: CoverImage;
+  slug: string;
+  title: string;
+  readTimeInMinutes: number;
+  updatedAt: string;
+  views: number;
+  url: string;
 }
 
 interface Edge {
-    node: Node;
+  node: Node;
 }
 
 interface Posts {
-    edges: Edge[];
+  edges: Edge[];
 }
 
 interface HashnodeResponse {
-    publication: { posts: Posts };
+  publication: { posts: Posts };
 }
 
 // Define the interface for the transformed data structure
 interface TransformedPost {
-    brief: string;
-    coverImage: {
-        url: string;
-    };
-    slug: string;
-    title: string;
-    readTime: number;
-    updatedAt: string;
+  brief: string;
+  coverImage: {
     url: string;
-    views: number;
+  };
+  slug: string;
+  title: string;
+  readTime: number;
+  updatedAt: string;
+  url: string;
+  views: number;
 }
 
 interface TransformedResponse {
-    posts: TransformedPost[];
+  posts: TransformedPost[];
 }
