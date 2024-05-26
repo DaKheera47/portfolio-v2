@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps = async () => {
     // execute gql query
     const QUERY = `query {
         publication(host: "dakheera47.hashnode.dev") {
-          posts(first: 10) {
+          posts(first: 5) {
             edges {
               node {
                 title
