@@ -33,7 +33,7 @@ export default function ProjectCard({
                     )}
                 </div>
 
-                <span className="text-base tracking-tight lg:tracking-normal lg:text-xl my-2 font-mono px-5 py-2 font-semibold bg-zinc-700 text-zinc-100 rounded-lg group-hover:bg-purple-900 transition-colors">
+                <span className="text-lg my-2 px-4 py-2 bg-zinc-700 text-zinc-100 rounded-lg w-fit group-hover:bg-purple-900 transition-colors">
                     {repoName}
                 </span>
 
