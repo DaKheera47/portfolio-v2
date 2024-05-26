@@ -17,7 +17,7 @@ export default function MusingCard({
             target="_blank"
             rel="noopener noreferrer"
         >
-            <div className="w-full bg-zinc-800 mx-auto p-8 my-2 hover:outline hover:outline-gray-400 duration-150 transition-all lg:hover:scale-[99%] cursor-pointer rounded-lg">
+            <div className="w-full bg-zinc-800 mx-auto group p-8 my-2 hover:outline hover:outline-purple-700 duration-75 cursor-pointer rounded-lg">
                 <div className="w-full border-b mb-6 pb-1">
                     <span className="text-gray-200 font-light text-sm uppercase tracking-[4px]">
                         Musing
@@ -30,7 +30,7 @@ export default function MusingCard({
                     )}
                 </div>
 
-                <h3 className="text-lg my-2 px-5 py-2 bg-zinc-700 text-zinc-100 rounded-lg w-fit">
+                <h3 className="text-lg my-2 px-5 py-2 bg-zinc-700 text-zinc-100 rounded-lg w-fit group-hover:bg-purple-900 transition-colors">
                     {title || "Untitled"}
                 </h3>
 

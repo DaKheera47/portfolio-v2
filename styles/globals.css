@@ -11,10 +11,14 @@ body {
     outline: 1px solid red !important;
 } */
 
+*::selection {
+    @apply bg-black text-purple-400;
+}
+
 html {
     scroll-behavior: smooth !important;
 }
 
 .link {
-    @apply underline underline-offset-2 py-1 hover:bg-gray-200 hover:text-gray-800 transition-colors;
+    @apply underline underline-offset-2 py-1 hover:bg-purple-700 hover:text-white transition-colors;
 }

@@ -76,7 +76,7 @@ export default function MainContent({ hashnodeData }: Props) {
             <div className="relative w-full">
                 <h1
                     id="projects"
-                    className="pt-6 pb-4 bg-zinc-900 font-bold text-4xl sticky top-0 z-10"
+                    className="pt-6 pb-4 scale-x-[101%] bg-zinc-900 font-bold text-4xl sticky top-0 z-10"
                 >
                     Projects
                 </h1>
@@ -94,7 +94,7 @@ export default function MainContent({ hashnodeData }: Props) {
             <div className="relative w-full">
                 <h1
                     id="musings"
-                    className="pt-6 pb-4 bg-zinc-900 font-bold text-4xl sticky top-0 z-10"
+                    className="pt-6 pb-4 scale-x-[101%] bg-zinc-900 font-bold text-4xl sticky top-0 z-10"
                 >
                     Musings
                 </h1>
