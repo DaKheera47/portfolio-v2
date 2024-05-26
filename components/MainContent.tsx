@@ -9,66 +9,46 @@ type Props = {
 export default function MainContent({ hashnodeData }: Props) {
     const projects = [
         {
-            repoName: "DaKheera47/mumtaz-urdu",
+            repoName: "mumtaz-urdu",
             description:
-                "A full stack education portal for students of O'Level Urdu",
+                "A full stack education portal for students of O'Level Urdu. Gets thousands of monthly views in peak exam season",
             type: "Nextjs | Full Stack",
             repoUrl: "https://mumtazurdu.com",
         },
         {
-            repoName: "DaKheera47/autoclass",
-            description: "Open Zoom meetings automatically on time, every time",
+            repoName: "autoclass",
+            description:
+                "Open Zoom meetings automatically on time, every time. Also has an associated Musing post, so you know it has a special place in my heart",
             type: "Python | Automation",
             repoUrl: "https://github.com/DaKheera47/autoclass",
         },
         {
-            repoName: "DaKheera47/meet-link-generator",
+            repoName: "meet-link-generator",
             description:
-                "Create thousands of Google Meet Links to find links with english words in them",
+                "Create thousands of Google Meet Links to find links with english words in them. Also has a Musing post!",
             type: "Python | Automation",
             repoUrl: "https://github.com/DaKheera47/meet-link-generator",
         },
         {
-            repoName: "PM/high-income-consultancy",
-            description:
-                "Landing page for High Income Consultancy, a income consultancy firm",
-            type: "Nextjs | Landing Page",
-            repoUrl: "https://www.hiccoaching.com/",
-        },
-        {
-            repoName: "PM/threegency",
-            description:
-                "Landing page with complete Strapi integration for Threegency, a web3 agency",
-            type: "Nextjs | Landing Page",
-            repoUrl: "https://threegency.promirage.com/",
-        },
-        {
-            repoName: "PM/atoro",
+            repoName: "atoro",
             description:
                 "Landing page with complete Strapi integration for Atoro, a cyber security firm based in Ireland",
             type: "Nextjs | Landing Page",
             repoUrl: "https://atoro.promirage.com/",
         },
         {
-            repoName: "PM/indus-marine-services",
+            repoName: "indus-marine-services",
             description:
-                "Full Stack web app for Indus Marine Services, a marine services firm based in UAE",
+                "Full Stack web app for Indus Marine Services, a marine services firm based in UAE. My first big project for a client!",
             type: "Nodejs | Full Stack",
             repoUrl: "https://ims-auh.com/",
         },
-        {
-            repoName: "PM/stellar-consultancy",
-            description:
-                "Landing page for Stellar Consultancy, a design consultancy firm",
-            type: "WordPress | Landing Page",
-            repoUrl: "https://www.stellarconsultancy.ca/",
-        },
-        {
-            repoName: "PM/ProjectMirageWebsite",
-            description: "Landing page for Project Mirage",
-            type: "Nextjs | Showcase",
-            repoUrl: "https://www.promirage.com",
-        },
+        // {
+        //     repoName: "project-mirage",
+        //     description: "Landing page for Project Mirage",
+        //     type: "Nextjs | Showcase",
+        //     repoUrl: "https://www.promirage.com",
+        // },
     ];
 
     return (
