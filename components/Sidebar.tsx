@@ -112,7 +112,7 @@ export default function Sidebar({}: Props) {
         </div>
 
         <p className="my-auto ml-5 w-4/5 text-gray-200">
-          Unsurprisngly, I&apos;m on{" "}
+          Unsurprisingly, I&apos;m on{" "}
           <a
             target="_blank"
             rel="noopener noreferrer"
