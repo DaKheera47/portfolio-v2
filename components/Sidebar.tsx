@@ -5,7 +5,7 @@ type Props = {};
 
 export default function Sidebar({}: Props) {
   return (
-    <div className="mx-auto w-4/5 bg-zinc-900 pt-12 lg:absolute lg:left-0 lg:top-0 lg:h-screen lg:w-2/5 lg:overflow-y-auto lg:pl-20 lg:pr-8">
+    <div className="mx-auto w-4/5 bg-zinc-900 pt-12 lg:h-screen lg:w-2/5 lg:overflow-y-auto lg:pl-20 lg:pr-8">
       <div className="mb-12 w-full border-b border-gray-200 pb-5">
         <h1 className="text-4xl font-bold lg:text-5xl">Shaheer Sarfaraz</h1>
         <p className="font-base text-lg lg:text-xl">
@@ -96,7 +96,7 @@ export default function Sidebar({}: Props) {
           />
         </div>
         <p className="my-auto ml-5 w-4/5 text-gray-200">
-          Unsurpringly, I&apos;m on{" "}
+          Unsurprisngly, I&apos;m on{" "}
           <a
             target="_blank"
             rel="noopener noreferrer"
