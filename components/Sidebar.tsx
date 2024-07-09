@@ -8,18 +8,33 @@ export default function Sidebar({}: Props) {
     <div className="mx-auto w-4/5 bg-zinc-900 pt-12 lg:h-screen lg:w-2/5 lg:overflow-y-auto lg:pl-20 lg:pr-8">
       <div className="mb-12 w-full border-b border-gray-200 pb-5">
         <h1 className="text-4xl font-bold lg:text-5xl">Shaheer Sarfaraz</h1>
-        <p className="font-base text-lg lg:text-xl">
-          Full Stack Developer at{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.promirage.com"
-            className="link"
-          >
-            Project Mirage
-          </a>
-        </p>
+        <div className="mt-2 space-y-0">
+          <p className="font-base text-lg lg:text-xl">
+            Frontend Software Engineering Intern at{"  "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.autodesk.co.uk/"
+              className="link"
+            >
+              Autodesk
+            </a>
+          </p>
+
+          <p className="font-base text-lg lg:text-xl">
+            Co-founder, Full Stack Developer at{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.promirage.com"
+              className="link"
+            >
+              Project Mirage
+            </a>
+          </p>
+        </div>
       </div>
+
       <div className="w-full space-y-4 border-b border-gray-200 pb-12">
         <p>
           My name is Shaheer, I also go by DaKheera47 often. I co-founded{" "}
@@ -95,6 +110,7 @@ export default function Sidebar({}: Props) {
             className="aspect-square rounded-full"
           />
         </div>
+
         <p className="my-auto ml-5 w-4/5 text-gray-200">
           Unsurprisngly, I&apos;m on{" "}
           <a
