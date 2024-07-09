@@ -52,7 +52,7 @@ export default function MainContent({ hashnodeData }: Props) {
   ];
 
   return (
-    <div className="mx-auto mt-4 flex w-4/5 flex-wrap bg-zinc-900 lg:absolute lg:right-0 lg:top-0 lg:h-[calc(100vh-1rem)] lg:w-3/5 lg:overflow-y-scroll lg:px-12">
+    <div className="mx-auto mt-4 flex w-4/5 flex-wrap bg-zinc-900 lg:h-[calc(100vh-1rem)] lg:w-3/5 lg:overflow-y-scroll lg:px-12">
       <div className="relative w-full">
         <h1
           id="projects"

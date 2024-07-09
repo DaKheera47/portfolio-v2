@@ -75,7 +75,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 function Home({ data }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div className="container mx-auto">
+    <div className="container">
       <Head>
         <title>Shaheer Sarfaraz</title>
         <meta
@@ -85,7 +85,7 @@ function Home({ data }: InferGetStaticPropsType<typeof getStaticProps>) {
         <link rel="icon" href="/me.png" />
       </Head>
 
-      <main className="text-gray-100">
+      <main className="flex flex-wrap text-gray-100">
         <Sidebar />
         <MainContent hashnodeData={data.posts} />
       </main>
