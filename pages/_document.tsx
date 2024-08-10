@@ -18,7 +18,7 @@ class MyDocument extends Document {
           />
 
           {/* clarity analytics */}
-          <Script strategy="afterInteractive">{`
+          <Script strategy="afterInteractive" id="clarity">{`
             <script type="text/javascript">
               (function(c,l,a,r,i,t,y){
                   c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
