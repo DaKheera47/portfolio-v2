@@ -75,7 +75,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 function Home({ data }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div className="container">
+    <div className="mx-auto max-w-screen-2xl">
       <Head>
         <title>Shaheer Sarfaraz</title>
         <meta
