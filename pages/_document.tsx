@@ -1,4 +1,5 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 class MyDocument extends Document {
   render() {
@@ -16,12 +17,16 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          {/* plausible analytics */}
-          <script
-            defer
-            data-domain="shaheersarfaraz.promirage.com"
-            src="https://plausible.io/js/script.js"
-          ></script>
+          {/* clarity analytics */}
+          <Script>{`
+            <script type="text/javascript">
+              (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "nl3ag580q9");
+            </script>
+          `}</Script>
         </Head>
         <body className="bg-zinc-900">
           <Main />
