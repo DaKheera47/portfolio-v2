@@ -1,10 +1,6 @@
-import type {
-  GetStaticProps,
-  InferGetServerSidePropsType,
-  InferGetStaticPropsType,
-  NextPage,
-} from "next";
+import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
+import Script from "next/script";
 import MainContent from "../components/MainContent";
 import Sidebar from "../components/Sidebar";
 
@@ -83,6 +79,23 @@ function Home({ data }: InferGetStaticPropsType<typeof getStaticProps>) {
           content="Portfolio of Shaheer Sarfaraz, a self-taught developer from Pakistan."
         />
         <link rel="icon" href="/me.png" />
+
+        {/* clarity analytics */}
+        <Script
+          strategy="afterInteractive"
+          id="clarity"
+          dangerouslySetInnerHTML={{
+            __html: `
+          <script type="text/javascript">
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "nl3ag580q9");
+          </script>
+        `,
+          }}
+        />
       </Head>
 
       <main className="flex flex-wrap text-gray-100">
