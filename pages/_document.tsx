@@ -1,4 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 class MyDocument extends Document {
   render() {
@@ -14,6 +15,11 @@ class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
             rel="stylesheet"
+          />
+          <Script
+            defer
+            src="https://umami.dakheera47.com/script.js"
+            data-website-id="88d27c9d-fe3a-42ae-b102-2e092dac6b1d"
           />
         </Head>
 
