@@ -16,11 +16,11 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
             rel="stylesheet"
           />
-          <Script
+          <script
             defer
             src="https://umami.dakheera47.com/script.js"
             data-website-id="88d27c9d-fe3a-42ae-b102-2e092dac6b1d"
-          />
+          ></script>
         </Head>
 
         <body className="bg-zinc-900">
