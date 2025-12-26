@@ -3,7 +3,7 @@ import me from "../public/me.png";
 
 type Props = {};
 
-export default function Sidebar({}: Props) {
+export default function Sidebar({ }: Props) {
   return (
     <div className="mx-auto w-4/5 bg-zinc-900 pt-12 lg:h-screen lg:w-2/5 lg:overflow-y-auto lg:pl-20 lg:pr-8">
       <div className="mb-12 w-full border-b border-gray-200 pb-5">
@@ -81,6 +81,14 @@ export default function Sidebar({}: Props) {
             href="https://dakheera47.hashnode.dev/"
           >
             Hashnode
+          </a>
+          .
+        </p>
+        <p>
+          For deeper dives into my repositories — what they are, why I built
+          them — check out{" "}
+          <a href="/things" className="link">
+            Things I've Built
           </a>
           .
         </p>

@@ -1,0 +1,28 @@
+---
+title: "AutoClass"
+description: "Automatically open Zoom meetings on time, every time"
+githubUrl: "https://github.com/DaKheera47/autoclass"
+techStack: ["Python", "Automation", "Scheduling"]
+createdAt: "2021-09-15"
+featured: true
+---
+
+# AutoClass
+
+During online classes in 2021, I found myself doing the same thing every day: scrambling to find the right Zoom link, opening it a few minutes late, missing the first bit of the lecture.
+
+This is the kind of problem that automation was made for.
+
+AutoClass reads a schedule file and opens the correct Zoom meeting at the scheduled time. That's it. No bells and whistles. Just a Python script that does one thing well.
+
+---
+
+The implementation is simple: a JSON file stores class schedules with their Zoom links, and a scheduler checks against the current time. When there's a match, it opens the browser.
+
+I used this daily throughout my online learning period. The time saved compounded — not just the minutes of finding links, but the mental overhead of remembering which class was next.
+
+---
+
+**Tech:** Python, Schedule library, JSON for storage.
+
+There's a companion [Musing post](https://dakheera47.hashnode.dev/) that goes deeper into the thought process. Worth reading if you're interested in why small automations matter.

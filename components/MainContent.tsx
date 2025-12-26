@@ -51,6 +51,23 @@ export default function MainContent({ hashnodeData }: Props) {
     // },
   ];
 
+  const thingsProjects = [
+    {
+      repoName: "autoclass",
+      description:
+        "Why I automated my Zoom meetings and what I learned about small automation wins",
+      type: "Deep Dive",
+      repoUrl: "/things/autoclass",
+    },
+    {
+      repoName: "meet-link-generator",
+      description:
+        "The story of hunting for Google Meet links with real English words",
+      type: "Deep Dive",
+      repoUrl: "/things/meet-link-generator",
+    },
+  ];
+
   return (
     <div className="mx-auto mt-4 flex w-4/5 flex-wrap bg-zinc-900 lg:h-[calc(100vh-1rem)] lg:w-3/5 lg:overflow-y-scroll lg:px-12">
       <div className="relative w-full">
@@ -61,6 +78,27 @@ export default function MainContent({ hashnodeData }: Props) {
           Projects
         </h1>
         {projects.map((project) => (
+          <ProjectCard
+            key={project.repoName}
+            repoName={project.repoName}
+            description={project.description}
+            type={project.type}
+            repoUrl={project.repoUrl}
+          />
+        ))}
+      </div>
+
+      <div className="relative w-full">
+        <h1
+          id="things-ive-built"
+          className="sticky top-0 z-10 scale-x-[101%] bg-zinc-900 pb-4 pt-6 text-4xl font-bold"
+        >
+          Things I've Built
+        </h1>
+        <p className="mb-4 text-gray-400">
+          Deep dives into my repositories — what they are and why I built them.
+        </p>
+        {thingsProjects.map((project) => (
           <ProjectCard
             key={project.repoName}
             repoName={project.repoName}
