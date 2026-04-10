@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shaheer Sarfaraz</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;700;800&family=Space+Mono&display=swap"
+            rel="stylesheet"
+        >
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            "display": ["Syne", "sans-serif"],
+                            "serif": [
+                                "Instrument Serif",
+                                "Georgia",
+                                "serif",
+                            ],
+                            "mono": ["Space Mono", "monospace"],
+                        },
+                        colors: {
+                            "warm": "#a8a29e",
+                            "warmer": "#d6d3d1",
+                            "warmest": "#f5f5f4",
+                            "ember": "#ea580c",
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body class="text-warm antialiased">
+        <main class="max-w-4xl mx-auto px-6 py-20 md:py-28">
+            <!-- HOME VIEW -->
+            <div data-view="home" id="home-view">
+                <!-- Name - Massive -->
+                <header class="mb-16 md:mb-24 slide-up delay-1">
+                    <h1 class="hero-name font-display font-800 text-warmest">
+                        Shaheer<br>Sarfaraz
+                    </h1>
+                    <p
+                        class="text-warm/50 mt-4 text-sm font-mono tracking-wide"
+                    >
+                        DaKheera47
+                    </p>
+                </header>
+
+                <!-- Ember line -->
+                <div class="ember-line mb-16 slide-up delay-2"></div>
+
+                <!-- Intro -->
+                <section class="mb-20 slide-up delay-2 max-w-xl">
+                    <p class="text-warmer leading-relaxed text-xl font-serif">
+                        I build things for the internet. Sometimes they work.
+                        Sometimes strangers start using them, and that still
+                        surprises me.
+                    </p>
+                    <p
+                        class="text-warm leading-relaxed mt-4 font-serif text-lg italic"
+                    >
+                        30 people use something I made every day. That's a lot
+                        of people.
+                    </p>
+                </section>
+
+                <!-- Now -->
+                <section class="mb-20 slide-up delay-3">
+                    <h2
+                        class="text-ember text-xs font-mono uppercase tracking-widest mb-8"
+                    >
+                        Now
+                    </h2>
+
+                    <div class="space-y-10">
+                        <a
+                            href="https://jobops.app"
+                            target="_blank"
+                            class="project block group"
+                        >
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <h3
+                                        class="text-warmest text-xl font-display font-700 group-hover:text-ember transition-colors"
+                                    >
+                                        JobOps
+                                    </h3>
+                                    <p
+                                        class="text-warm mt-2 leading-relaxed font-serif"
+                                    >
+                                        A job tracker that somehow has paying
+                                        customers. 2,000 stars on GitHub. 30
+                                        people who actually use it daily.
+                                    </p>
+                                </div>
+                                <span
+                                    class="project-arrow text-warm/40 group-hover:text-ember transition-colors ml-4 mt-1 text-xl"
+                                >→</span>
+                            </div>
+                        </a>
+
+                        <a
+                            href="https://dotheysponsor.uk"
+                            target="_blank"
+                            class="project block group"
+                        >
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <h3
+                                        class="text-warmest text-xl font-display font-700 group-hover:text-ember transition-colors"
+                                    >
+                                        dotheysponsor.uk
+                                    </h3>
+                                    <p
+                                        class="text-warm mt-2 leading-relaxed font-serif"
+                                    >
+                                        125,000 UK companies that might sponsor
+                                        your visa. Built it because I needed it.
+                                    </p>
+                                </div>
+                                <span
+                                    class="project-arrow text-warm/40 group-hover:text-ember transition-colors ml-4 mt-1 text-xl"
+                                >→</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <button
+                        onclick="navigateTo('work')"
+                        class="mt-10 text-warm/60 text-sm font-mono hover:text-ember transition-colors cursor-pointer group"
+                    >
+                        View all work <span
+                            class="inline-block group-hover:translate-x-1 transition-transform"
+                        >→</span>
+                    </button>
+                </section>
+
+                <!-- Before -->
+                <section class="mb-20 slide-up delay-4">
+                    <h2
+                        class="text-ember text-xs font-mono uppercase tracking-widest mb-8"
+                    >
+                        Before
+                    </h2>
+                    <p class="text-warm leading-relaxed font-serif max-w-xl">
+                        Started a dev agency at 17. Interned at <a
+                            href="https://www.autodesk.com"
+                            target="_blank"
+                            class="text-warmer underline hover:text-ember transition-colors"
+                        >Autodesk</a>. Made some things that failed. Made some
+                        things that didn't.
+                    </p>
+                </section>
+
+                <!-- Divider -->
+                <div class="ember-line mb-16 slide-up delay-5"></div>
+
+                <!-- Elsewhere -->
+                <div data-footer-slot data-footer-class="slide-up delay-5"></div>
+            </div>
+
+            <!-- WORK VIEW -->
+            <div data-view="work" id="work-view" class="view-hidden">
+                <button
+                    onclick="navigateTo('home')"
+                    class="back-link text-warm/60 text-sm font-mono hover:text-ember transition-colors cursor-pointer mb-12 inline-block"
+                >
+                    ← Back
+                </button>
+
+                <header class="mb-16">
+                    <h1
+                        class="text-6xl md:text-8xl font-display font-800 text-warmest tracking-tight"
+                    >
+                        Work
+                    </h1>
+                    <p class="text-warm mt-4 font-serif text-lg">
+                        Things I've built. Some useful, some not.
+                    </p>
+                </header>
+
+                <div class="ember-line mb-16"></div>
+
+                <div class="space-y-16">
+                    <!-- Current -->
+                    <section>
+                        <h2
+                            class="text-ember text-xs font-mono uppercase tracking-widest mb-8"
+                        >
+                            Current
+                        </h2>
+
+                        <div class="space-y-10">
+                            <a
+                                href="https://jobops.app"
+                                target="_blank"
+                                class="project block group"
+                            >
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h3
+                                            class="text-warmest text-xl font-display font-700 group-hover:text-ember transition-colors"
+                                        >
+                                            JobOps
+                                        </h3>
+                                        <p
+                                            class="text-warm mt-2 leading-relaxed font-serif"
+                                        >
+                                            Open source job application tracker.
+                                            AI-augmented, self-hostable. 2,000+
+                                            GitHub stars. Three paying
+                                            customers.
+                                        </p>
+                                    </div>
+                                    <span
+                                        class="project-arrow text-warm/40 group-hover:text-ember transition-colors ml-4 mt-1 text-xl"
+                                    >→</span>
+                                </div>
+                            </a>
+
+                            <a
+                                href="https://dotheysponsor.uk"
+                                target="_blank"
+                                class="project block group"
+                            >
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h3
+                                            class="text-warmest text-xl font-display font-700 group-hover:text-ember transition-colors"
+                                        >
+                                            dotheysponsor.uk
+                                        </h3>
+                                        <p
+                                            class="text-warm mt-2 leading-relaxed font-serif"
+                                        >
+                                            UK visa sponsor search. 125,000
+                                            companies indexed from the Home
+                                            Office register.
+                                        </p>
+                                    </div>
+                                    <span
+                                        class="project-arrow text-warm/40 group-hover:text-ember transition-colors ml-4 mt-1 text-xl"
+                                    >→</span>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Past -->
+                    <section>
+                        <h2
+                            class="text-ember text-xs font-mono uppercase tracking-widest mb-8"
+                        >
+                            Past
+                        </h2>
+
+                        <div class="space-y-10">
+                            <a
+                                href="https://mumtaz-urdu.dakheera47.com"
+                                target="_blank"
+                                class="project block group"
+                            >
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h3
+                                            class="text-warmest text-xl font-display font-700 group-hover:text-ember transition-colors"
+                                        >
+                                            mumtaz-urdu
+                                        </h3>
+                                        <p
+                                            class="text-warm mt-2 leading-relaxed font-serif"
+                                        >
+                                            Education portal for O Level Urdu
+                                            students. Thousands of monthly views
+                                            during exam season.
+                                        </p>
+                                    </div>
+                                    <span
+                                        class="project-arrow text-warm/40 group-hover:text-ember transition-colors ml-4 mt-1 text-xl"
+                                    >→</span>
+                                </div>
+                            </a>
+
+                            <a
+                                href="https://github.com/DaKheera47/autoclass"
+                                target="_blank"
+                                class="project block group"
+                            >
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h3
+                                            class="text-warmest text-xl font-display font-700 group-hover:text-ember transition-colors"
+                                        >
+                                            autoclass
+                                        </h3>
+                                        <p
+                                            class="text-warm mt-2 leading-relaxed font-serif"
+                                        >
+                                            Opens Zoom meetings automatically,
+                                            on time. Built during lockdown when
+                                            I kept missing class.
+                                        </p>
+                                    </div>
+                                    <span
+                                        class="project-arrow text-warm/40 group-hover:text-ember transition-colors ml-4 mt-1 text-xl"
+                                    >→</span>
+                                </div>
+                            </a>
+
+                            <a
+                                href="https://github.com/DaKheera47/meet-link-generator"
+                                target="_blank"
+                                class="project block group"
+                            >
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h3
+                                            class="text-warmest text-xl font-display font-700 group-hover:text-ember transition-colors"
+                                        >
+                                            meet-link-generator
+                                        </h3>
+                                        <p
+                                            class="text-warm mt-2 leading-relaxed font-serif"
+                                        >
+                                            Bulk Google Meet link generator.
+                                            Made for my mum's teaching work.
+                                        </p>
+                                    </div>
+                                    <span
+                                        class="project-arrow text-warm/40 group-hover:text-ember transition-colors ml-4 mt-1 text-xl"
+                                    >→</span>
+                                </div>
+                            </a>
+
+                            <div class="project block opacity-50">
+                                <div>
+                                    <h3
+                                        class="text-warmest/80 text-xl font-display font-700"
+                                    >
+                                        mmcq.me
+                                    </h3>
+                                    <p
+                                        class="text-warm/70 mt-2 leading-relaxed font-serif"
+                                    >
+                                        Cambridge O/A Level MCQ practice
+                                        platform. Good product, bad
+                                        distribution. Shut down.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="project block opacity-50">
+                                <div>
+                                    <h3
+                                        class="text-warmest/80 text-xl font-display font-700"
+                                    >
+                                        Project Mirage
+                                    </h3>
+                                    <p
+                                        class="text-warm/70 mt-2 leading-relaxed font-serif"
+                                    >
+                                        Dev agency I co-founded at 17. Client
+                                        work. Learned a lot about what I didn't
+                                        want to do.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Divider -->
+                <div class="ember-line my-16"></div>
+
+                <!-- Footer -->
+                <div data-footer-slot></div>
+            </div>
+        </main>
+        <script src="./ui.js"></script>
+        <script src="./writing.js"></script>
+    </body>
+</html>
