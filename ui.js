@@ -12,6 +12,10 @@ const SHARED_FOOTER_LINKS = [
     href: "https://youtube.com/@DaKheera47",
   },
   {
+    label: "Hashnode",
+    href: "https://dakheera47.hashnode.dev",
+  },
+  {
     label: "Email",
     href: "mailto:shaheer30sarfaraz@gmail.com",
   },
@@ -80,11 +84,24 @@ function applyView(viewName, shouldScrollToTop) {
   }
 }
 
-window.navigateTo = function navigateTo(viewName) {
-  applyView(viewName, true);
+function pushViewState(viewName) {
+  if (window.location.protocol === "file:") {
+    history.pushState({ view: viewName }, "");
+    return;
+  }
 
   const newUrl = viewName === "home" ? "/" : `/#${viewName}`;
   history.pushState({ view: viewName }, "", newUrl);
+}
+
+window.navigateTo = function navigateTo(viewName) {
+  applyView(viewName, true);
+  try {
+    pushViewState(viewName);
+  } catch (error) {
+    console.warn("Falling back to hash-based navigation:", error);
+    window.location.hash = viewName === "home" ? "home" : viewName;
+  }
 };
 
 window.addEventListener("popstate", (event) => {
