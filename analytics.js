@@ -2,7 +2,6 @@
   "use strict";
 
   const DEFAULT_UMAMI_SCRIPT_URL = "/stats/script.js";
-  const CLOUD_UMAMI_SCRIPT_URL = "https://cloud.umami.is/script.js";
   const MAX_TEXT_LENGTH = 120;
 
   const state = {
@@ -182,7 +181,8 @@
     const scriptUrl = getMetaContent("umami-script-url") || DEFAULT_UMAMI_SCRIPT_URL;
     const domains = getMetaContent("umami-domains");
     const hostUrl = getMetaContent("umami-host-url");
-    const mountScript = (url, allowFallback) => {
+    const debugAnalytics = getMetaContent("umami-debug") === "true";
+    const mountScript = (url) => {
       const script = document.createElement("script");
       script.defer = true;
       script.src = url;
@@ -204,19 +204,19 @@
       });
 
       script.addEventListener("error", () => {
-        if (allowFallback && url !== CLOUD_UMAMI_SCRIPT_URL) {
-          console.warn(`Failed to load Umami script at ${url}; falling back to Umami Cloud.`);
-          mountScript(CLOUD_UMAMI_SCRIPT_URL, false);
-          return;
+        // Most script load failures here are client-side blockers (ad/privacy extensions).
+        // Disable analytics quietly so we avoid noisy fallback/error logs.
+        state.umamiEnabled = false;
+        state.queuedEvents = [];
+        if (debugAnalytics) {
+          console.warn(`Failed to load Umami script: ${url}`);
         }
-
-        console.warn(`Failed to load Umami script: ${url}`);
       });
 
       document.head.appendChild(script);
     };
 
-    mountScript(scriptUrl, true);
+    mountScript(scriptUrl);
   }
 
   window.analytics = {
