@@ -21,6 +21,26 @@ const SHARED_FOOTER_LINKS = [
   },
 ];
 
+function getVisibleViewName() {
+  const visibleView = document.querySelector("[data-view]:not(.view-hidden)");
+  return visibleView?.dataset?.view || "home";
+}
+
+function trackViewChange(viewName, source) {
+  if (!window.analytics) return;
+
+  if (typeof window.analytics.trackViewChange === "function") {
+    window.analytics.trackViewChange(viewName, source);
+    return;
+  }
+
+  window.analytics.setCurrentView?.(viewName);
+  window.analytics.track?.("view_change", {
+    to_view: viewName,
+    source,
+  });
+}
+
 function createSharedFooter(slot) {
   const footer = document.createElement("footer");
   const footerClass = slot.getAttribute("data-footer-class");
@@ -36,7 +56,6 @@ function createSharedFooter(slot) {
     anchor.textContent = `${link.label}`;
     anchor.href = link.href;
     anchor.className = "block text-warmer hover:text-ember transition-colors";
-
     if (!link.href.startsWith("mailto:")) {
       anchor.target = "_blank";
       anchor.rel = "noopener noreferrer";
@@ -96,6 +115,7 @@ function pushViewState(viewName) {
 
 window.navigateTo = function navigateTo(viewName) {
   applyView(viewName, true);
+  trackViewChange(viewName, "navigateTo");
   try {
     pushViewState(viewName);
   } catch (error) {
@@ -107,13 +127,18 @@ window.navigateTo = function navigateTo(viewName) {
 window.addEventListener("popstate", (event) => {
   const viewName = event.state?.view || "home";
   applyView(viewName, false);
+  trackViewChange(viewName, "popstate");
 });
 
 window.addEventListener("DOMContentLoaded", () => {
   mountSharedFooters();
-
   const hash = window.location.hash.replace("#", "");
   if (hash && hash !== "home") {
     applyView(hash, false);
+    trackViewChange(hash, "hash_on_load");
+    return;
   }
+
+  const visibleView = getVisibleViewName();
+  window.analytics?.setCurrentView?.(visibleView);
 });
