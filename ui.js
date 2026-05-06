@@ -76,6 +76,51 @@ function mountSharedFooters() {
   });
 }
 
+function formatGitHubStarCount(count) {
+  const roundedCount = Math.round(count / 100) * 100;
+
+  return `${new Intl.NumberFormat("en-US").format(roundedCount)} GitHub ${
+    roundedCount === 1 ? "star" : "stars"
+  }`;
+}
+
+async function fetchGitHubStarCount(repo) {
+  const response = await fetch(`https://api.github.com/repos/${repo}`, {
+    headers: {
+      Accept: "application/vnd.github+json",
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(`GitHub request failed for ${repo}: ${response.status}`);
+  }
+
+  const data = await response.json();
+  const stars = Number(data.stargazers_count);
+  if (!Number.isFinite(stars)) {
+    throw new Error(`GitHub response missing stars for ${repo}`);
+  }
+
+  return stars;
+}
+
+async function hydrateGitHubStars() {
+  const starElements = [...document.querySelectorAll("[data-github-stars]")];
+  const repos = [...new Set(starElements.map((element) => element.dataset.githubStars))];
+
+  await Promise.allSettled(
+    repos.map(async (repo) => {
+      const stars = await fetchGitHubStarCount(repo);
+      const label = formatGitHubStarCount(stars);
+      starElements
+        .filter((element) => element.dataset.githubStars === repo)
+        .forEach((element) => {
+          element.textContent = label;
+        });
+    })
+  );
+}
+
 function applyView(viewName, shouldScrollToTop) {
   const views = document.querySelectorAll("[data-view]");
 
@@ -132,6 +177,8 @@ window.addEventListener("popstate", (event) => {
 
 window.addEventListener("DOMContentLoaded", () => {
   mountSharedFooters();
+  hydrateGitHubStars();
+
   const hash = window.location.hash.replace("#", "");
   if (hash && hash !== "home") {
     applyView(hash, false);
