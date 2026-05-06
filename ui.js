@@ -77,10 +77,10 @@ function mountSharedFooters() {
 }
 
 function formatGitHubStarCount(count) {
-  const roundedCount = Math.round(count / 100) * 100;
+  const displayCount = count >= 1000 ? Math.round(count / 100) * 100 : count;
 
-  return `${new Intl.NumberFormat("en-US").format(roundedCount)} GitHub ${
-    roundedCount === 1 ? "star" : "stars"
+  return `${new Intl.NumberFormat("en-US").format(displayCount)} GitHub ${
+    displayCount === 1 ? "star" : "stars"
   }`;
 }
 
